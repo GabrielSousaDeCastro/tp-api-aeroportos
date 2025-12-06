@@ -29,6 +29,10 @@ public class AeroportoService {
         return aeroportoRepository.save(aeroporto);
     }
 
+    public Aeroporto atualizar(Aeroporto aeroporto) {
+        return aeroportoRepository.save(aeroporto); // Save without 'exists' check for updates
+    }
+
     public void excluir(Integer id) {
         aeroportoRepository.deleteById(id);
     }
